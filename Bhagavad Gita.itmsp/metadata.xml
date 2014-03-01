@@ -6,6 +6,7 @@
         <metadata>
             <publication_type>book</publication_type>
             <title>ശ്രീമദ് ഭഗവദ്ഗീത</title>
+            <subtitle>അർത്ഥസഹിതം</subtitle>
             <contributors>
                 <contributor>
                     <primary>true</primary>
@@ -29,13 +30,13 @@
             <subjects>
                 <subject primary="true" scheme="bisac">REL032030</subject>
             </subjects>
-            <description format="html">ശ്രീമദ് ഭഗവദ്ഗീത&lt;br&gt;
+            <description format="html">&lt;u&gt;&lt;b&gt;ശ്രീമദ്&lt;/b&gt;&lt;/u&gt;&lt;u&gt;&lt;b&gt; &lt;/b&gt;&lt;/u&gt;&lt;u&gt;&lt;b&gt;ഭഗവദ്ഗീത&lt;/b&gt;&lt;/u&gt;&lt;br&gt;
 &lt;br&gt;
 Srimad Bhagavad Gita in Malayalam with meaning of all 700 slokas and of Geeta Dhyanam and Geeta Mahatmyam. Bhagavad Gita is the most popular Hindu scripture. It is said in Gita Mahatmya that Gita is the essence of Vedas.&lt;br&gt;
 &lt;br&gt;
 "All the Upanishads are the cows, the one who milks the cows is Krishna, Arjuna (Partha) is the calf. Men of purified intellect are the beneficiaries; the cow's milk is the great nectar of the Gita".&lt;br&gt;
 &lt;br&gt;
-&lt;u&gt;&lt;b&gt;&lt;i&gt;Famous Quotes on Bhagavad Gita&lt;/i&gt;&lt;/b&gt;&lt;/u&gt;&lt;br&gt;
+&lt;b&gt;&lt;i&gt;Famous Quotes on Bhagavad Gita&lt;/i&gt;&lt;/b&gt;&lt;br&gt;
 &lt;br&gt;
 &lt;b&gt;Adi Sankara:&lt;/b&gt; From a clear knowledge of the Bhagavad-Gita all the goals of human existence become fulfilled. Bhagavad-Gita is the manifest quintessence of all the teachings of the Vedic scriptures.&lt;br&gt;
 &lt;br&gt;
@@ -47,9 +48,15 @@ Srimad Bhagavad Gita in Malayalam with meaning of all 700 slokas and of Geeta Dh
 &lt;br&gt;
 __________________________________________________________________________&lt;br&gt;
 &lt;br&gt;
-&lt;b&gt;Source&lt;/b&gt;: https://archive.org/details/BhagavadGitaMalayalamTextWithTranslation
+&lt;b&gt;Source&lt;/b&gt;: &lt;a href="https://archive.org/details/BhagavadGitaMalayalamTextWithTranslation"&gt;https://archive.org/details/BhagavadGitaMalayalamTextWithTranslation&lt;/a&gt;&lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;Read more: &lt;/b&gt;&lt;a href="http://hinduebooks.blogspot.com/2009/08/bhagavad-gita-malayalam-text.html"&gt;http://hinduebooks.blogspot.com/2009/08/bhagavad-gita-malayalam-text.html&lt;/a&gt; &lt;br&gt;
+&lt;br&gt;
+&lt;b&gt;iBooks Author Source Files:&lt;/b&gt; &lt;a href="https://github.com/floydpink/BhagavadGita"&gt;https://github.com/floydpink/BhagavadGita&lt;/a&gt;
 </description>
+            <imprint>http://www.harimenon.com</imprint>
             <publisher>Haridas Pachuveetil</publisher>
+            <preorder_previews>true</preorder_previews>
             <explicit>false</explicit>
             <publication_date>2014-03-01</publication_date>
             <audience_info>
