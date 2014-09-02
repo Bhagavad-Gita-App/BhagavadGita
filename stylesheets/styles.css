@@ -822,6 +822,11 @@ section #title .credits.right {
 
 #graphic {
     background-color: #eee;
+    padding: 20px;
+    border-radius: 10px;
+    -webkit-box-shadow: 4px 4px 10px 0px rgba(81, 81, 80, 1);
+    -moz-box-shadow: 4px 4px 10px 0px rgba(81, 81, 80, 1);
+    box-shadow: 4px 4px 10px 0px rgba(81, 81, 80, 1);
 }
 
 @media print, screen and (max-width: 720px) {
