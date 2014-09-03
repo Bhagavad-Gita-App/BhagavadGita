@@ -3,6 +3,10 @@
 
 Source: [http://hinduebooks.blogspot.com](http://hinduebooks.blogspot.com)
 
+[![Get the Android app on Google Play Store](http://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.floydpink.android.bhagavadgita)
+
+[![Srimad Bhagavad Gita](http://floydpink.github.io/BhagavadGita/images/graphic.png)](http://floydpink.github.io/BhagavadGita/)
+
 [ഗീതാധ്യാനം](#dhyanam)
 
 [ഗീതാമാഹാത്മ്യം](#mahathmyam)
