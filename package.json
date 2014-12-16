@@ -1,8 +1,8 @@
 {
   "name": "gita",
-  "version": "0.0.1",
-  "description": "manipulate gita.json",
-  "main": "index.js",
+  "version": "0.0.2",
+  "description": "manipulate gita.json from the original README.md",
+  "main": "lib/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
