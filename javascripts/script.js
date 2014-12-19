@@ -12,7 +12,7 @@ var getQ       = function (name) {
         }
         slokaNumber = slokaNumbers.join(', ');
       }
-      return slokaNumber;
+      return ((slokaNumber.toString().indexOf(',') > -1) ? 'ശ്ലോകങ്ങൾ' : 'ശ്ലോകം') + ' ' + slokaNumber;
     },
     shareReady = function () {
       $.getJSON('../javascripts/gita.json', function (data) {
@@ -21,13 +21,13 @@ var getQ       = function (name) {
         if (c && s && gita.Chapters[c] && gita.Chapters[c].Sections[s]) {
           var chapter = gita.Chapters[c];
           var sloka = chapter.Sections[s];
+          $('#speaker').html(sloka.Speaker || "");
           $('#sloka').html(sloka.Content);
           $('#meaning').html(sloka.Meaning);
-          $('#subtitle').html(chapter.Subtitle ? ' (' + chapter.Subtitle + ') ' : '');
-          $('#title').html(chapter.Title + ' - ');
+          $('#subtitle').html(chapter.Subtitle ? chapter.Subtitle + ' - ' : '');
+          $('#title').html(chapter.Title);
           var slokaNumber = getSlokaNumber(s, sloka);
-          $('#slokaNumber').html(slokaNumber);
-          $('#book').html('ശ്രീമദ് ഭഗവദ്ഗീത');
+          $('#slokaNumber').html(' - ' + slokaNumber);
           document.title = $('#title').html() + $('#slokaNumber').html();
         } else {
           $('#share').hide()
@@ -41,8 +41,7 @@ var getQ       = function (name) {
           $.each(gita.Chapters, function (chapterIndex, chapter) {
             links.push('<li class="title">' + chapter.Title + '</li>')
             $.each(chapter.Sections, function (sectionIndex, section) {
-              var slokaNumber = getSlokaNumber(sectionIndex, section);
-              var linkText = ((slokaNumber.toString().indexOf(',') > -1) ? 'ശ്ലോകങ്ങൾ' : 'ശ്ലോകം') + ' ' + slokaNumber;
+              var linkText = getSlokaNumber(sectionIndex, section);
               links.push('<li><a href="index.html?c=' + chapterIndex + '&s=' + sectionIndex + '">' + linkText + '</a></li>');
             });
           });

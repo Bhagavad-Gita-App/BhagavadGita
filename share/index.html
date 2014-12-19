@@ -15,7 +15,16 @@
   <link rel="stylesheet" href="../stylesheets/ie.css">
   <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <style>
+    #mast {
+      border-bottom : 1px dotted #ffa500;
+      float         : left;
+    }
 
+    #title {
+      font-size : larger;
+    }
+  </style>
 </head>
 <body>
   <div id="header" class="gita">
@@ -30,15 +39,12 @@
     <section>
       <div id="share">
         <div>
-          <pre><code id="sloka"></code></pre>
-          <p id="meaning"></p></div>
+          <div class="group"><h1 id="mast"><span id="subtitle"></span><span id="title"></span><span id="slokaNumber"></span></h1></div>
+          <p><strong><em><strong id="speaker"></strong></em></strong></p>
+          <pre id="slokaPre"><code id="sloka"></code></pre>
+          <p id="meaning"></p>
+        </div>
         <br/>
-        <div>
-          <blockquote><span id="subtitle"></span><span id="title"></span><span id="slokaNumber"></span></blockquote>
-        </div>
-        <div>
-          <blockquote><span id="book"></span></blockquote>
-        </div>
         <br/>
         <br/>
         <br/>
