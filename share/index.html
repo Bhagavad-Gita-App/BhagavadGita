@@ -16,13 +16,36 @@
   <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <style>
+    section {
+      padding-bottom: 10px;
+    }
     #mast {
       border-bottom : 1px dotted #ffa500;
       float         : left;
     }
 
+    #share {
+      display       : none;
+      border        : 1px dashed #555;
+      padding       : 10px;
+      margin-bottom : 15px;
+    }
+
     #title {
       font-size : larger;
+    }
+
+    #sharetools {
+      float : right;
+    }
+
+    #sharetools > div {
+      display : inline;
+    }
+
+    #facebook {
+      position : relative;
+      top      : -7px;
     }
   </style>
 </head>
@@ -50,6 +73,31 @@
         <br/>
         <br/>
         <br/>
+        <div class="group">
+          <div id="sharetools">
+            <div>
+              <small>Share this &#160;<em>Sloka</em>&#160;</small>
+            </div>
+            <div id="twitter">
+              <a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="BhagavadGita, malayalam">Tweet</a>
+              <script>$(function () {
+                !function (d, s, id) {
+                  var js, fjs = d.getElementsByTagName(s)[0], p = /^http:/.test(d.location) ? 'http' : 'https';
+                  if (!d.getElementById(id)) {
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = p + '://platform.twitter.com/widgets.js';
+                    fjs.parentNode.insertBefore(js, fjs);
+                  }
+                }(document, 'script', 'twitter-wjs');
+              })</script>
+            </div>
+            <div id="facebook">
+              <div id="fbsharebutton" class="fb-share-button" data-href="http://floydpink.github.io/BhagavadGita" data-layout="button_count"
+                   data-width="138px"></div>
+            </div>
+          </div>
+        </div>
       </div>
       <div>
         <h1>ശ്രീമദ് ഭഗവദ്ഗീത</h1>
@@ -78,6 +126,15 @@
   <script type="text/javascript">
     $(shareReady);
   </script>
+  <div id="fb-root"></div>
+  <script>(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
   <script type="text/javascript">
     var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
     document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

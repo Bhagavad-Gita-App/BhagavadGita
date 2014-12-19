@@ -28,9 +28,9 @@ var getQ       = function (name) {
           $('#title').html(chapter.Title);
           var slokaNumber = getSlokaNumber(s, sloka);
           $('#slokaNumber').html(' - ' + slokaNumber);
-          document.title = $('#title').html() + $('#slokaNumber').html();
-        } else {
-          $('#share').hide()
+          document.title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html() + $('#slokaNumber').html();
+          $('#fbsharebutton').attr('data-href', location.href)
+          $('#share').fadeIn()
         }
       });
     },
@@ -42,7 +42,7 @@ var getQ       = function (name) {
             links.push('<li class="title">' + chapter.Title + '</li>')
             $.each(chapter.Sections, function (sectionIndex, section) {
               var linkText = getSlokaNumber(sectionIndex, section);
-              links.push('<li><a href="index.html?c=' + chapterIndex + '&s=' + sectionIndex + '">' + linkText + '</a></li>');
+              links.push('<li><a href="./?c=' + chapterIndex + '&s=' + sectionIndex + '">' + linkText + '</a></li>');
             });
           });
           $('#links').append(links.join(''));
