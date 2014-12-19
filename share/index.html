@@ -17,8 +17,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
   <style>
     section {
-      padding-bottom: 10px;
+      padding-bottom : 10px;
     }
+
     #mast {
       border-bottom : 1px dotted #ffa500;
       float         : left;
@@ -52,7 +53,7 @@
 <body>
   <div id="header" class="gita">
     <nav>
-      <li class="fork"><a href="../">Home</a></li>
+      <li class="fork"><a href="all.html">View All</a></li>
     </nav>
   </div>
   <!-- end header -->
@@ -61,11 +62,13 @@
 
     <section>
       <div id="share">
-        <div>
+        <div id="chapter">
           <div class="group"><h1 id="mast"><span id="subtitle"></span><span id="title"></span><span id="slokaNumber"></span></h1></div>
-          <p><strong><em><strong id="speaker"></strong></em></strong></p>
-          <pre id="slokaPre"><code id="sloka"></code></pre>
-          <p id="meaning"></p>
+          <div id="section">
+            <p><strong><em><strong class="speaker"></strong></em></strong></p>
+            <pre><code class="sloka"></code></pre>
+            <p class="meaning"></p>
+          </div>
         </div>
         <br/>
         <br/>
