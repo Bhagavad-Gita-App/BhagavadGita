@@ -14,7 +14,7 @@ var getQ           = function (name) {
         }
         slokaNumber = slokaNumbers.join(', ');
       }
-      return ((slokaNumber.toString().indexOf(',') > -1) ? 'ശ്ലോകങ്ങൾ' : 'ശ്ലോകം') + ' ' + slokaNumber;
+      return ((slokaNumber.toString().indexOf(',') > -1) ? 'ശ്ലോകങ്ങൾ ' : 'ശ്ലോകം ') + slokaNumber;
     },
     shareReady     = function () { // jshint ignore:line
       $.getJSON('../javascripts/gita.json', function (gita) {
