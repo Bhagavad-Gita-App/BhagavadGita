@@ -50,9 +50,14 @@ var getQ           = function (name) {
         document.title = title;
         description = description.length > 117 ? description.substring(0, 117) + '...' : description;
         $('#fbsharebutton').attr('data-href', location.href);
+        // facebook open graph
         $('head').append('<meta property="og:title" content="' + title + '" />');
         $('head').append('<meta property="og:url" content="' + location.href + '" />');
         $('head').append('<meta property="og:description" content="' + description + '"  />');
+        // twitter cards
+        $('meta[name="twitter:url"]').attr('content', location.href);
+        $('meta[name="twitter:title"]').attr('content', title);
+        $('meta[name="twitter:description"]').attr('content', description);
       });
     },
     allReady       = function () { // jshint ignore:line
