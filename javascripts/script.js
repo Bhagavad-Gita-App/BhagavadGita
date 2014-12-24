@@ -58,7 +58,7 @@ var getQ           = function (name) {
     },
     allReady       = function () { // jshint ignore:line
       $(function () {
-        $.getJSON('../javascripts/gita.json', function (gita) {
+        $.getJSON('./javascripts/gita.json', function (gita) {
           var links = [];
           $.each(gita.Chapters, function (chapterIndex, chapter) {
             links.push('<li class="title"><a href="./share/?c=' + chapterIndex + '">' + chapter.Title + '</a></li>');
