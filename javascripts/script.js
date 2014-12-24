@@ -20,6 +20,8 @@ var getQ           = function (name) {
       $.getJSON('../javascripts/gita.json', function (gita) {
         var c = getQ('c'), s = getQ('s');
         var chapter = gita.Chapters[c];
+        var title = '';
+        var description = '';
         if (c && s && chapter && gita.Chapters[c].Sections[s]) {
           var sloka = chapter.Sections[s];
           $('.speaker').html(sloka.Speaker || '');
@@ -29,7 +31,8 @@ var getQ           = function (name) {
           $('#title').html(chapter.Title);
           var slokaNumber = getSlokaNumber(s, sloka);
           $('#slokaNumber').html(' - ' + slokaNumber);
-          document.title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html() + $('#slokaNumber').html();
+          title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html() + $('#slokaNumber').html();
+          description = sloka.Content;
           $('#fbsharebutton').attr('data-href', location.href);
           $('#share').fadeIn();
         } else if (c && chapter) {
@@ -41,10 +44,16 @@ var getQ           = function (name) {
             slokaCopy.find('.meaning').html(sloka.Meaning);
           });
           $('#title').html(chapter.Title);
-          document.title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html();
+          title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html();
+          description = $('#section0').find('.sloka').html();
           $('#fbsharebutton').attr('data-href', location.href);
           $('#share').fadeIn();
         }
+        document.title = title;
+        description = description.length > 117 ? description.substring(0, 117) + '...' : description;
+        $('head').append('<meta property="og:image" content="http://http://floydpink.github.io/BhagavadGita/images/graphic.png">');
+        $('head').append('<meta property="og:title" content="' + title + '" />');
+        $('head').append('<meta property="og:description" content="' + description + '"  />');
       });
     },
     allReady       = function () { // jshint ignore:line
@@ -52,10 +61,10 @@ var getQ           = function (name) {
         $.getJSON('../javascripts/gita.json', function (gita) {
           var links = [];
           $.each(gita.Chapters, function (chapterIndex, chapter) {
-            links.push('<li class="title"><a href="./?c=' + chapterIndex + '">' + chapter.Title + '</a></li>');
+            links.push('<li class="title"><a href="./share/?c=' + chapterIndex + '">' + chapter.Title + '</a></li>');
             $.each(chapter.Sections, function (sectionIndex, section) {
               var linkText = getSlokaNumber(sectionIndex, section);
-              links.push('<li><a href="./?c=' + chapterIndex + '&s=' + sectionIndex + '">' + linkText + '</a></li>');
+              links.push('<li><a href="./share/?c=' + chapterIndex + '&s=' + sectionIndex + '">' + linkText + '</a></li>');
             });
           });
           $('#links').append(links.join(''));
