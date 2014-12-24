@@ -33,7 +33,6 @@ var getQ           = function (name) {
           $('#slokaNumber').html(' - ' + slokaNumber);
           title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html() + $('#slokaNumber').html();
           description = sloka.Content;
-          $('#fbsharebutton').attr('data-href', location.href);
           $('#share').fadeIn();
         } else if (c && chapter) {
           var sectionClone = $('#section').detach();
@@ -46,13 +45,13 @@ var getQ           = function (name) {
           $('#title').html(chapter.Title);
           title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html();
           description = $('#section0').find('.sloka').html();
-          $('#fbsharebutton').attr('data-href', location.href);
           $('#share').fadeIn();
         }
         document.title = title;
         description = description.length > 117 ? description.substring(0, 117) + '...' : description;
-        $('head').append('<meta property="og:image" content="http://http://floydpink.github.io/BhagavadGita/images/graphic.png">');
+        $('#fbsharebutton').attr('data-href', location.href);
         $('head').append('<meta property="og:title" content="' + title + '" />');
+        $('head').append('<meta property="og:url" content="' + location.href + '" />');
         $('head').append('<meta property="og:description" content="' + description + '"  />');
       });
     },
