@@ -892,6 +892,18 @@ section #title .credits.right {
   clear   : both;
 }
 
+.slokaSection {
+  position      : relative;
+  margin-bottom : 50px;
+}
+
+.detailLink {
+  position      : absolute;
+  bottom        : 0;
+  right         : 10px;
+  margin-bottom : -40px;
+}
+
 @media print, screen and (max-width : 720px) {
   .wrapper {
     padding : 0 20px;
