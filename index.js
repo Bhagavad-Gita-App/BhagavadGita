@@ -92,6 +92,9 @@ var writeSectionFile = function (chapterIndex, chapter, sectionIndex, section) {
     $('.speaker').html(section.Speaker || '');
     $('.sloka').html(section.Content);
     $('.meaning').html(section.Meaning);
+
+    $('.detailLink').remove();
+
     $('#subtitle').html(chapter.Subtitle ? chapter.Subtitle + ' - ' : '');
 
     $('#title').html($('<a></a>').attr('href', '../').attr('title', 'View Adhyaya').text(chapter.Title));
