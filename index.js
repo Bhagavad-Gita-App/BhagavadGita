@@ -55,13 +55,23 @@ var processChapter = function (chapterIndex, chapter) {
   var chapterCallback = function ($) {
     var sectionClone = $('#section').detach();
     $.each(chapter.Sections, function (sectionIndex, sloka) {
-      var slokaCopy = sectionClone.clone().attr('id', 'section' + sectionIndex).addClass('slokaSection').appendTo('#chapter');
+      var slokaCopy = sectionClone.clone().attr('id', 'section' + sectionIndex).addClass('slokaSection').appendTo('#sections');
       slokaCopy.find('.speaker').html(sloka.Speaker || '');
       slokaCopy.find('.sloka').html(sloka.Content);
       slokaCopy.find('.meaning').html(sloka.Meaning);
       slokaCopy.find('.detailLink').attr('href', sectionIndex + '/');
     });
+    if (chapter.Intro) {
+      $('#intro').text(chapter.Intro);
+    } else {
+      $('#intro').remove();
+    }
     $('#title').html(chapter.Title);
+    if (chapter.Outro) {
+      $('#outro').text(chapter.Outro);
+    } else {
+      $('#outro').remove();
+    }
 
     title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + chapter.Title;
     description = $('#section0').find('.sloka').html().replace(/\n/g, ' ');
