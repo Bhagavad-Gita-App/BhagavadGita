@@ -894,14 +894,23 @@ section #title .credits.right {
 
 .slokaSection {
   position      : relative;
-  margin-bottom : 50px;
+  margin-bottom : 10px;
+}
+
+.sectionSeparator {
+  min-height    : 1px;
+  border-bottom : 1px dotted #ffa500;
+  margin-top    : 40px;
 }
 
 .detailLink {
-  position      : absolute;
-  bottom        : 0;
-  right         : 10px;
-  margin-bottom : -40px;
+  position : absolute;
+  bottom   : 0;
+  right    : 10px;
+}
+
+#outro {
+  margin : 20px;
 }
 
 @media print, screen and (max-width : 720px) {
@@ -945,6 +954,10 @@ section #title .credits.right {
     margin-top : -20px;
   }
 
+  h1 {
+    font-size : 20px;
+  }
+
   body {
     font-size : 14px;
   }
@@ -959,5 +972,9 @@ section #title .credits.right {
 
   nav {
     display : none;
+  }
+
+  .sectionSeparator {
+    margin-top : 20px;
   }
 }
