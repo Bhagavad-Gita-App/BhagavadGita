@@ -913,6 +913,11 @@ section #title .credits.right {
   margin : 20px;
 }
 
+.facebook-no-count {
+  width    : 49px !important;
+  overflow : hidden !important;
+}
+
 @media print, screen and (max-width : 720px) {
   .wrapper {
     padding : 0 20px;
