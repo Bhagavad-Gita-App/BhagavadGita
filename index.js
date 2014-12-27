@@ -55,14 +55,15 @@ var processChapter = function (chapterIndex, chapter) {
   var chapterCallback = function ($) {
     var sectionClone = $('#section').detach();
     $.each(chapter.Sections, function (sectionIndex, sloka) {
-      var slokaCopy = sectionClone.clone().attr('id', 'section' + sectionIndex).appendTo('#chapter');
+      var slokaCopy = sectionClone.clone().attr('id', 'section' + sectionIndex).addClass('slokaSection').appendTo('#chapter');
       slokaCopy.find('.speaker').html(sloka.Speaker || '');
       slokaCopy.find('.sloka').html(sloka.Content);
       slokaCopy.find('.meaning').html(sloka.Meaning);
+      slokaCopy.find('.detailLink').attr('href', sectionIndex + '/');
     });
     $('#title').html(chapter.Title);
 
-    title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html();
+    title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + chapter.Title;
     description = $('#section0').find('.sloka').html().replace(/\n/g, ' ');
     description = description.length > 117 ? description.substring(0, 117) + '...' : description;
     url = baseUrl + chapterIndex + '/';
@@ -83,12 +84,12 @@ var writeSectionFile = function (chapterIndex, chapter, sectionIndex, section) {
     $('.meaning').html(section.Meaning);
     $('#subtitle').html(chapter.Subtitle ? chapter.Subtitle + ' - ' : '');
 
-    $('#title').html(chapter.Title);
+    $('#title').html($('<a></a>').attr('href', '../').attr('title', 'View Adhyaya').text(chapter.Title));
 
     var slokaNumber = getSlokaNumber(sectionIndex, section);
     $('#slokaNumber').html(' - ' + slokaNumber);
 
-    title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + $('#title').html() + $('#slokaNumber').html();
+    title = 'ശ്രീമദ് ഭഗവദ്ഗീത - ' + chapter.Title + $('#slokaNumber').html();
     description = section.Content.replace(/\n/g, ' ');
     description = description.length > 117 ? description.substring(0, 117) + '...' : description;
     url = baseUrl + chapterIndex + '/' + sectionIndex + '/';
