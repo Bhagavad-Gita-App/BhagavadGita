@@ -6,21 +6,13 @@ var _ = require('lodash');
 var env = require('jsdom').env;
 var gita = require('./javascripts/gita.json');
 
-var title, description, url;
+var title, description, url, iosUrl;
 
 var baseUrl = 'http://floydpink.github.io/BhagavadGita/share/';
 var outputPath = './output/';
 
-var readTemplateAndProcessCallback = function (callback) {
-  env('./templates/share.html', function (errors, window) {
-    if (errors) {
-      console.log('!!!ERRORS:');
-      console.error(errors);
-    } else {
-      var $ = require('jquery')(window);
-      callback($);
-    }
-  });
+var makeIosUrl = function(url) {
+  return url.replace(baseUrl, 'bhagavadgitamalayalam://');
 };
 
 var writeFile = function (path, content) {
@@ -51,6 +43,18 @@ var getSlokaNumber = function (s, sloka) {
   return ((slokaNumber.toString().indexOf(',') > -1) ? 'ശ്ലോകങ്ങൾ ' : 'ശ്ലോകം ') + slokaNumber;
 };
 
+var readTemplateAndProcessCallback = function (callback) {
+  env('./templates/share.html', function (errors, window) {
+    if (errors) {
+      console.log('!!!ERRORS:');
+      console.error(errors);
+    } else {
+      var $ = require('jquery')(window);
+      callback($);
+    }
+  });
+};
+
 var processChapter = function (chapterIndex, chapter) {
   var chapterCallback = function ($) {
     var sectionClone = $('#section').detach();
@@ -77,10 +81,12 @@ var processChapter = function (chapterIndex, chapter) {
     description = $('#section0').find('.sloka').html().replace(/\n/g, ' ');
     description = description.length > 117 ? description.substring(0, 117) + '...' : description;
     url = baseUrl + chapterIndex + '/';
+    iosUrl = makeIosUrl(url);
 
     var html = $('html').html().replace(/%TITLE%/g, title);
     html = html.replace(/%DESCRIPTION%/g, description);
     html = html.replace(/%URL%/g, url);
+    html = html.replace(/%IOS-URL%/g, iosUrl);
     var chapterPageContent = '<!DOCTYPE html>\n<html>\n' + html + '\n</html>\n';
     writeFile(outputPath + chapterIndex + '/', chapterPageContent);
   };
@@ -106,10 +112,12 @@ var writeSectionFile = function (chapterIndex, chapter, sectionIndex, section) {
     description = section.Content.replace(/\n/g, ' ');
     description = description.length > 117 ? description.substring(0, 117) + '...' : description;
     url = baseUrl + chapterIndex + '/' + sectionIndex + '/';
+    iosUrl = makeIosUrl(url);
 
     var html = $('html').html().replace(/%TITLE%/g, title);
     html = html.replace(/%DESCRIPTION%/g, description);
     html = html.replace(/%URL%/g, url);
+    html = html.replace(/%IOS-URL%/g, iosUrl);
     var sectionPageContent = '<!DOCTYPE html>\n<html>\n' + html + '\n</html>\n';
     writeFile(outputPath + chapterIndex + '/' + sectionIndex + '/', sectionPageContent);
   };
