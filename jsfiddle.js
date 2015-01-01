@@ -1,3 +1,5 @@
+// source for the tweak done on JSFiddle - http://jsfiddle.net/FloydPink/h8gkqgyz/
+
 var gita = {};  // bring the content from the previous version of the JSON
 
 // has a dependency of lodash
