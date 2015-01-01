@@ -12,7 +12,7 @@ var baseUrl = 'http://floydpink.github.io/BhagavadGita/share/';
 var outputPath = './output/';
 
 var makeIosUrl = function(url) {
-  return url.replace(baseUrl, 'bhagavadgitamalayalam://');
+  return url.replace(baseUrl, 'bhagavadgitamalayalam:///');
 };
 
 var writeFile = function (path, content) {
