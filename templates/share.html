@@ -18,6 +18,7 @@
   <!-- end twitter card summary -->
   <link rel="stylesheet" href="/BhagavadGita/stylesheets/styles.css">
   <link rel="stylesheet" href="/BhagavadGita/stylesheets/pygment_trac.css">
+  <link rel="stylesheet" href="/BhagavadGita/stylesheets/jquery.smartbanner.css">
   <script id="facebook-jssdk" src="//connect.facebook.net/en_US/sdk.js#xfbml=1&amp;version=v2.0"></script>
   <script id="twitter-wjs" src="http://platform.twitter.com/widgets.js"></script>
   <script async="" src="//www.google-analytics.com/analytics.js"></script>
@@ -28,7 +29,6 @@
   <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <!--[if lt IE 8]>
-  <link rel="stylesheet" href="/BhagavadGita/stylesheets/jquery.smartbanner.css">
   <link rel="stylesheet" href="/BhagavadGita/stylesheets/ie.css">
   <![endif]-->
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
@@ -149,7 +149,8 @@
     $.smartbanner({
       title: IS_IOS ? "Bhagavad Gita (Malayalam)" : "ശ്രീമദ് ഭഗവദ്ഗീത",
       author: "Haridas Pachuveetil",
-      icon: "http://floydpink.github.io/BhagavadGita/images/icon.png"
+      icon: "http://floydpink.github.io/BhagavadGita/images/icon.png",
+      force: "ios"
     });
   </script>
   <script src="https://apis.google.com/js/platform.js" async defer></script>
