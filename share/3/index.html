@@ -655,7 +655,8 @@
   <script type="text/javascript">
     $.smartbanner({
       title: IS_IOS ? "Bhagavad Gita (Malayalam)" : "ശ്രീമദ് ഭഗവദ്ഗീത",
-      author: "Haridas Pachuveetil"
+      author: "Haridas Pachuveetil",
+      force: IS_IOS ? 'ios' : (IS_ANDROID ? 'android' : '')
     });
   </script>
   <script src="https://apis.google.com/js/platform.js" async="" defer=""></script>
