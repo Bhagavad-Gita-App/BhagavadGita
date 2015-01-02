@@ -956,7 +956,7 @@ section #title .credits.right {
   }
 
   #header {
-    margin-top : -20px;
+    display : none;
   }
 
   h1 {

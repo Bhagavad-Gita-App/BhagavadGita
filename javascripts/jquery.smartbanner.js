@@ -160,7 +160,7 @@
                 $('html').animate({marginTop: this.origHtmlMargin}, this.options.speedIn, 'swing', callback);
             } else {
                 if ($.support.transition) {
-                    banner.css('top', -1*this.bannerHeight*this.scale).removeClass('shown');
+                    banner.hide().removeClass('shown');
                     var transitionCallback = function() {
                         $('html').removeClass('sb-animation');
                         if (callback) {
