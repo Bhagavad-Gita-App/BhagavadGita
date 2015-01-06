@@ -1,10 +1,6 @@
 'use strict'; // jshint ignore:line
 
-var getQ           = function (name) {
-      var match = new RegExp('[?&]' + name + '=([^&]*)').exec(window.location.search);
-      return match && decodeURIComponent(match[1].replace(/\+/g, ' '));
-    },
-    getSlokaNumber = function (s, sloka) {
+var getSlokaNumber = function (s, sloka) {
       var slokaNumber = parseInt(s, 10) + 1;
       var re = /\(([0-9]+)\)/gm;
       if (sloka.Content.match(re)) {
@@ -17,17 +13,15 @@ var getQ           = function (name) {
       return ((slokaNumber.toString().indexOf(',') > -1) ? 'ശ്ലോകങ്ങൾ ' : 'ശ്ലോകം ') + slokaNumber;
     },
     allReady       = function () { // jshint ignore:line
-      $(function () {
-        $.getJSON('./javascripts/gita.json', function (gita) {
-          var links = [];
-          $.each(gita.Chapters, function (chapterIndex, chapter) {
-            links.push('<li class="title"><a href="./share/' + chapterIndex + '/">' + chapter.Title + '</a></li>');
-            $.each(chapter.Sections, function (sectionIndex, section) {
-              var linkText = getSlokaNumber(sectionIndex, section);
-              links.push('<li><a href="./share/' + chapterIndex + '/' + sectionIndex + '/">' + linkText + '</a></li>');
-            });
+      $.getJSON('./javascripts/gita.json', function (gita) {
+        var links = [];
+        $.each(gita.Chapters, function (chapterIndex, chapter) {
+          links.push('<li class="title"><a href="./share/' + chapterIndex + '/">' + chapter.Title + '</a></li>');
+          $.each(chapter.Sections, function (sectionIndex, section) {
+            var linkText = getSlokaNumber(sectionIndex, section);
+            links.push('<li><a href="./share/' + chapterIndex + '/' + sectionIndex + '/">' + linkText + '</a></li>');
           });
-          $('#links').append(links.join(''));
         });
+        $('#links').append(links.join(''));
       });
     };

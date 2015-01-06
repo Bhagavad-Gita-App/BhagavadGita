@@ -948,6 +948,14 @@ section #title .credits.right {
     font-size : 17px;
   }
 
+  .web-version, .android-version, .ibooks-version, .pdf-version {
+    height : 50px;
+  }
+
+  .android-version img {
+    height : 52px;
+  }
+
 }
 
 @media print, screen and (max-width : 480px) {
@@ -982,4 +990,13 @@ section #title .credits.right {
   .sectionSeparator {
     margin-top : 20px;
   }
+
+  .web-version, .android-version, .ibooks-version, .pdf-version {
+    height : 45px;
+  }
+
+  .android-version img {
+    height : 47px;
+  }
+
 }
