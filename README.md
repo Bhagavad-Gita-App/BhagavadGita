@@ -1,7 +1,7 @@
 ശ്രീമദ് ഭഗവദ്ഗീത | Srimad Bhagavad Gita
 ==============
 
-[![Get the Android app on Google Play Store](http://developer.android.com/images/brand/en_app_rgb_wo_60.png)](https://play.google.com/store/apps/details?id=com.floydpink.android.bhagavadgita) -|- [Android Source](https://github.com/floydpink/BhagavadGita-android) -|- ![iOS Coming soon...](https://raw.githubusercontent.com/floydpink/Mantis-CI/a1f883ffff9ee026447a6c26dd15c85d85123002/images/badge_appstore-coming-soon.gif) -|- [iOS Source](https://github.com/floydpink/BhagavadGita-ios)
+[![Download on the App Store](http://floydpink.github.io/BhagavadGita/images/app-store.png)](https://itunes.apple.com/us/app/bhagavad-gita-malayalam/id953008948?mt=8&uo=4) -|- [iOS Source](https://github.com/floydpink/BhagavadGita-ios) -|- [![Get the Android app on Google Play Store](http://floydpink.github.io/BhagavadGita/images/play-store.png)](https://play.google.com/store/apps/details?id=com.floydpink.android.bhagavadgita) -|- [Android Source](https://github.com/floydpink/BhagavadGita-android)
 
 [![Srimad Bhagavad Gita](http://floydpink.github.io/BhagavadGita/images/graphic.png)](http://floydpink.github.io/BhagavadGita/)
 
