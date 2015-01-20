@@ -854,7 +854,7 @@ section #title .credits.right {
   margin             : 0 auto 20px;
 }
 
-.web-version, .android-version, .ibooks-version, .pdf-version {
+.web-version, .ios-version, .android-version, .ibooks-version, .pdf-version {
   height         : 60px;
   display        : inline-block;
   vertical-align : bottom;
@@ -948,11 +948,11 @@ section #title .credits.right {
     font-size : 17px;
   }
 
-  .web-version, .android-version, .ibooks-version, .pdf-version {
+  .web-version, .ios-version, .android-version, .ibooks-version, .pdf-version {
     height : 50px;
   }
 
-  .android-version img {
+  .ios-version img, .android-version img {
     height : 52px;
   }
 
@@ -991,11 +991,11 @@ section #title .credits.right {
     margin-top : 20px;
   }
 
-  .web-version, .android-version, .ibooks-version, .pdf-version {
+  .web-version, .ios-version, .android-version, .ibooks-version, .pdf-version {
     height : 45px;
   }
 
-  .android-version img {
+  .ios-version img, .android-version img {
     height : 47px;
   }
 
