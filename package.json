@@ -1,6 +1,6 @@
 {
   "name": "gita-site-generator",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "generate all static pages for bhagavad gita website",
   "main": "index.js",
   "scripts": {
@@ -21,10 +21,13 @@
     "url": "https://github.com/floydpink/BhagavadGita/issues"
   },
   "homepage": "https://github.com/floydpink/BhagavadGita",
+  "engines": {
+    "node": ">=7.x"
+  },
   "dependencies": {
-    "jquery": "^2.1.3",
-    "jsdom": "^1.5.0",
-    "lodash": "^2.4.1",
-    "mkdirp": "^0.5.0"
+    "jquery": "^3.2.1",
+    "jsdom": "^9.12.0",
+    "lodash": "^4.17.4",
+    "mkdirp": "^0.5.1"
   }
 }
