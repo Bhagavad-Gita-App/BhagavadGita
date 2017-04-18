@@ -394,7 +394,7 @@ fieldset {
 
 /*
  * 1. Corrects color not being inherited in IE6/7/8/9
- * 2. Corrects text not wrapping in FF3 
+ * 2. Corrects text not wrapping in FF3
  * 3. Corrects alignment displayed oddly in IE6/7
  */
 legend {
@@ -535,7 +535,7 @@ table {
 body {
   padding               : 0px 0 20px 0px;
   margin                : 0px;
-  font                  : 20px/1.5 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font                  : 20px/1.5 "Manjari", "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color                 : #f0e7d5;
   font-weight           : normal;
   background            : #252525;
@@ -551,7 +551,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   color       : #e8e8e8;
   margin      : 0 0 10px;
-  font-family : 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family : 'Manjari', 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight : normal;
 }
 
@@ -578,7 +578,7 @@ h4, h5, h6 {
 h3 {
   font-size   : 18px;
   line-height : 24px;
-  font-family : 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family : 'Manjari', 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight : normal;
   color       : #b6b6b6;
 }
@@ -605,7 +605,7 @@ ul {
 }
 
 strong {
-  font-family : 'OpenSansBold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family : 'Manjari', 'OpenSansBold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight : normal;
 }
 
@@ -628,7 +628,7 @@ blockquote {
 }
 
 code {
-  font-family           : "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+  font-family           : 'Manjari', "Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
   color                 : #efefef;
   font-size             : 22px;
   margin                : 0 4px;
@@ -676,7 +676,7 @@ th {
   padding       : 5px 10px;
   border-bottom : 1px solid #434343;
   color         : #b6b6b6;
-  font-family   : 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family   : 'Manjari', 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight   : normal;
 }
 
@@ -696,7 +696,7 @@ hr {
 
 dt {
   color       : #F0E7D5;
-  font-family : 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+  font-family : 'Manjari', 'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight : normal;
 }
 
@@ -724,7 +724,7 @@ dt {
 }
 
 #header nav li {
-  font-family : 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family : 'Manjari', 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight : normal;
   list-style  : none;
   display     : inline;
@@ -808,7 +808,7 @@ section #title {
 }
 
 section #title h1 {
-  font-family : 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family : 'Manjari', 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight : normal;
   font-size   : 40px;
   text-align  : center;
@@ -817,7 +817,7 @@ section #title h1 {
 
 section #title p {
   color       : #d7cfbe;
-  font-family : 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family : 'Manjari', 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight : normal;
   font-size   : 18px;
   text-align  : center;
@@ -825,7 +825,7 @@ section #title p {
 
 section #title .credits {
   font-size   : 11px;
-  font-family : 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family : 'Manjari', 'OpenSansRegular', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight : normal;
   color       : #696969;
   margin-top  : -10px;
@@ -869,7 +869,7 @@ section #title .credits.right {
 }
 
 .web-version a, .ibooks-version a, .pdf-version a {
-  font-family : monospace, serif;
+  font-family : 'Manjari', monospace, serif;
   font-size   : smaller;
 }
 
@@ -882,7 +882,7 @@ section #title .credits.right {
 }
 
 .readme-blurb {
-  font-family : 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family : 'Manjari', 'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size   : 16px;
 }
 
